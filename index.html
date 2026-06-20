@@ -10,6 +10,43 @@
     html { scroll-behavior: smooth; }
     section[id], div[id], nav[id] { scroll-margin-top: 64px; }
 
+    /* ── GLOBAL NAV ── */
+    .globalnav {
+      background: #1e293b;
+      padding: 0 20px;
+    }
+    .globalnav-inner {
+      max-width: 1080px;
+      margin: 0 auto;
+      height: 44px;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .globalnav-brand {
+      font-size: 13px;
+      font-weight: 800;
+      color: #fff;
+      text-decoration: none;
+      flex-shrink: 0;
+      margin-right: 12px;
+    }
+    .globalnav-links { display: flex; gap: 2px; }
+    .globalnav-links a {
+      text-decoration: none;
+      color: rgba(255,255,255,0.6);
+      font-size: 13px;
+      font-weight: 600;
+      padding: 6px 14px;
+      border-radius: 6px;
+      transition: background 0.15s, color 0.15s;
+    }
+    .globalnav-links a:hover,
+    .globalnav-links a.active {
+      background: rgba(255,255,255,0.12);
+      color: #fff;
+    }
+
     /* ── STICKY NAV ── */
     .topnav {
       position: sticky;
@@ -700,6 +737,18 @@
   </style>
 </head>
 <body>
+
+<!-- GLOBAL NAV -->
+<nav class="globalnav">
+  <div class="globalnav-inner">
+    <a href="index.html" class="globalnav-brand">📄 データ化エージェント</a>
+    <div class="globalnav-links">
+      <a href="index.html" class="active">ホーム</a>
+      <a href="features.html">機能詳細</a>
+      <a href="company.html">会社情報</a>
+    </div>
+  </div>
+</nav>
 
 <!-- STICKY NAV -->
 <nav id="top" class="topnav">
